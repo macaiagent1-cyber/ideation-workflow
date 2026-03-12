@@ -6,11 +6,11 @@ These weights determine how the five scoring dimensions combine into a composite
 
 | Dimension | Weight | What It Measures |
 |-----------|--------|-----------------|
-| Impact | {{WEIGHT_IMPACT}} | How many people this serves and how deeply |
-| Feasibility | {{WEIGHT_FEASIBILITY}} | How quickly and realistically this can be delivered |
-| Channel Alignment | {{WEIGHT_CHANNEL}} | How well this reinforces content pillars and brand |
-| Research Alignment | {{WEIGHT_RESEARCH}} | How well this demonstrates or advances the MWP/ICM thesis |
-| Novelty | {{WEIGHT_NOVELTY}} | How differentiated this is from existing solutions |
+| Impact | 0.30 | How many people this serves and how deeply |
+| Feasibility | 0.20 | How quickly and realistically this can be delivered |
+| Channel Alignment | 0.20 | How well this reinforces content pillars and brand |
+| Research Alignment | 0.20 | How well this demonstrates or advances the MWP/ICM thesis |
+| Novelty | 0.10 | How differentiated this is from existing solutions |
 
 ## Weight Guidelines
 
