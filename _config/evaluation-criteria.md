@@ -1,40 +1,66 @@
-# Evaluation Criteria & Weights
-
-These weights determine how the five scoring dimensions combine into a composite priority score. They reflect strategic priorities set during onboarding.
+# Evaluation Criteria & Weights — Kevin Edition
 
 ## Scoring Dimensions
 
 | Dimension | Weight | What It Measures |
 |-----------|--------|-----------------|
-| Impact | {{WEIGHT_IMPACT}} | How many people this serves and how deeply |
-| Feasibility | {{WEIGHT_FEASIBILITY}} | How quickly and realistically this can be delivered |
-| Channel Alignment | {{WEIGHT_CHANNEL}} | How well this reinforces content pillars and brand |
-| Research Alignment | {{WEIGHT_RESEARCH}} | How well this demonstrates or advances the MWP/ICM thesis |
-| Novelty | {{WEIGHT_NOVELTY}} | How differentiated this is from existing solutions |
+| Impact | 0.35 | How much daily value does this create for Kevin? |
+| Feasibility | 0.25 | How quickly and realistically can this be done? |
+| Linda-compatible | 0.20 | Can Linda automate/handle this? (replaces Channel Alignment) |
+| Strategic fit | 0.15 | Aligns with Kevin's current projects and focus? (replaces Research Alignment) |
+| Novelty | 0.05 | How differentiated from what already exists in Kevin's stack? |
 
-## Weight Guidelines
+Weights sum to 1.0. Edit to match Kevin's current priorities.
 
-Weights must sum to 1.0. Default configuration:
+## Score Guide
 
-| Priority Profile | Impact | Feasibility | Channel | Research | Novelty |
-|-----------------|--------|-------------|---------|----------|---------|
-| **Balanced** (default) | 0.30 | 0.20 | 0.20 | 0.20 | 0.10 |
-| **Community-first** | 0.40 | 0.25 | 0.15 | 0.10 | 0.10 |
-| **Research-driven** | 0.20 | 0.15 | 0.20 | 0.35 | 0.10 |
-| **Content-driven** | 0.25 | 0.15 | 0.35 | 0.15 | 0.10 |
-| **Ship fast** | 0.25 | 0.35 | 0.20 | 0.10 | 0.10 |
+### Impact (0.35)
+| Score | Meaning |
+|-------|---------|
+| 5 | Saves Kevin hours daily or fundamentally improves a core workflow |
+| 4 | Clear daily value, meaningful improvement |
+| 3 | Occasional value, nice to have |
+| 2 | Marginal improvement to something already working |
+| 1 | Niche, rarely used |
 
-The user selects a profile during onboarding (Q3 in questionnaire) or provides custom weights.
+### Feasibility (0.25)
+| Score | Meaning |
+|-------|---------|
+| 5 | Done in < 30 min, tools already exist |
+| 4 | Few hours, clear path |
+| 3 | Day or two, some unknowns |
+| 2 | Multi-day, significant complexity or blockers |
+| 1 | Weeks+, uncertain path |
 
-## How Weights Are Applied
+### Linda-compatible (0.20)
+| Score | Meaning |
+|-------|---------|
+| 5 | Linda runs this fully autonomously with zero Kevin input |
+| 4 | Linda handles 80%+, Kevin approves |
+| 3 | Linda assists, Kevin drives |
+| 2 | Linda plays a minor supporting role |
+| 1 | Linda can't help — pure dev/manual work |
 
+### Strategic fit (0.15)
+| Score | Meaning |
+|-------|---------|
+| 5 | Directly advances a current top-priority project |
+| 4 | Strongly aligned with active focus area |
+| 3 | Related but not urgent |
+| 2 | Interesting but outside current focus |
+| 1 | No connection to current priorities |
+
+### Novelty (0.05)
+| Score | Meaning |
+|-------|---------|
+| 5 | Nothing like this in Kevin's stack yet |
+| 4 | Exists partially, this would be meaningfully better |
+| 3 | Alternatives exist but serve differently |
+| 2 | Good alternatives already available |
+| 1 | Well-solved, adding this adds nothing |
+
+## Composite
 ```
-Composite = (Impact × W_impact) + (Feasibility × W_feasibility) + (Channel × W_channel) + (Research × W_research) + (Novelty × W_novelty)
+Score = (Impact × 0.35) + (Feasibility × 0.25) + (Linda-compatible × 0.20) + (Strategic fit × 0.15) + (Novelty × 0.05)
 ```
-
-Maximum possible composite score: 5.0
-Minimum: 1.0
-
-## Strategic Override
-
-The user can override any ranking at the Stage 04 checkpoint. Overrides are noted in the output with rationale. The scoring provides a starting point for discussion, not a final answer.
+Max: 5.0 / Min: 1.0
